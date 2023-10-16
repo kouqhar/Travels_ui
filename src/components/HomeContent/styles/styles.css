@@ -1,0 +1,371 @@
+.container {
+	height: 100vh;
+	overflow-y: auto;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	align-items: space-between;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.sections {
+	height: fit-content;
+	width: 90%;
+	margin-block-end: 1rem;
+	margin-inline: auto;
+	border-radius: 1rem;
+	color: #000;
+	padding-block: .55rem;
+}
+
+.sections .headers {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.sections h2 {
+	font-size: 1rem;
+	margin-block-end: 1rem;
+	opacity: .75;
+}
+
+
+/* Search and notification */
+.search_notification {
+	position: sticky;
+	top: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #fff;
+	height: 8vh;
+	z-index: 100;
+
+}
+
+.search_notification .form_group {
+	position: relative;
+	margin-inline: var(--slight-margin);
+}
+
+.search_notification .form_group img {
+	position: absolute;
+	left: .5rem;
+	top: .5rem;
+	opacity: .5;
+}
+
+.search_notification .form_group input {
+	background-color: transparent;
+	color: dimgrey;
+	border: 1px solid lightgrey;
+	border-radius: .5rem;
+	padding: .75rem 3rem;
+	width: 100%;
+	outline: none;
+	font-weight: bold;
+}
+
+.notification_date {
+	display: flex;
+	font-size: 1.2rem;
+	align-items: center;
+	justify-content: space-around;
+	position: relative;
+	margin-inline: var(--slight-margin);
+}
+
+.notification_date__day {
+	margin-inline-end: 2rem;
+}
+
+.notification_date__counter {
+	height: 20px;
+	aspect-ratio: 1;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: -5px;
+	right: 0;
+	background-color: red;
+	color: #fff;
+	border-radius: 50%;
+	font-size: .8rem;
+	font-weight: bold;
+	z-index: 100;
+}
+
+.notification_date__bell {
+	padding: .5rem;
+	border: 1px solid lightgrey;
+	border-radius: .5rem;
+	transform: scale(.8);
+	opacity: .5;
+}
+
+
+/* Top Banner */
+.top_banner {
+	position: relative;
+	height: 25vh;
+}
+
+.top_banner__bannerImage {
+	height: 70%;
+	width: 100%;
+	object-fit: cover;
+	border-radius: 1rem;
+}
+
+.top_banner__booking {
+	position: absolute;
+	width: 85%;
+	bottom: 0;
+	left: 4.2%;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	justify-content: space-between;
+	align-items: center;
+	background-color: #fff;
+	height: 10vh;
+	color: dimgrey;
+	border-radius: 1rem;
+	margin-inline: auto;
+	padding-inline: 1rem;
+}
+
+.top_banner__booking___form____group {
+	border-right: 1px solid black;
+	padding-inline-end: .5rem;
+	display: flex;
+	align-items: center;
+	padding-inline: 1.5rem;
+}
+
+.top_banner__booking___form____group img {
+	opacity: .5;
+	transform: scale(.75);
+}
+
+.top_banner__booking___form____group:nth-child(3) {
+	border-right: unset;
+}
+
+.top_banner__booking___form____group input {
+	outline: none;
+	border: none;
+	background-color: transparent;
+	color: #000;
+}
+
+
+/* Trending Destinations */
+
+.trending_destination__header___actions {
+	display: flex;
+	gap: .5rem;
+}
+
+.trending_destination__header___actions img {
+	border: 1px solid lightgrey;
+	border-radius: .75rem;
+	transform: scale(.75);
+	cursor: pointer;
+}
+
+.trending_destination__header___actions img:last-child {
+	background-color: lightsteelblue;
+}
+
+.trending_destination__wrapper {
+	width: 80vw;
+}
+
+.trending_destination__wrapper___pagination {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: .3rem;
+}
+
+.trending_destination__wrapper___pagination span {
+	height: 10px;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	background-color: #aaa;
+	margin-block-start: 1rem;
+	cursor: pointer;
+}
+
+.trending_destination__wrapper___pagination span:nth-child(2) {
+	transform: scale(1.2);
+	background-color: darkslategrey;
+}
+
+.trending_destination__wrapper___content {
+	display: flex;
+	align-items: center;
+	column-gap: 20px;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	scroll-snap-type: x mandatory;
+	padding-inline-end: 1.5rem;
+}
+
+.trending_destination__wrapper___content {
+	scroll-snap-type: center;
+	min-width: 75%;
+}
+
+.trending_destination__wrapper___content____card {
+	height: 100px;
+	padding-inline: 1rem;
+	scroll-snap-type: center;
+	min-width: 55%;
+	background-color: #fff;
+	border-radius: 1rem;
+	display: flex;
+	gap: 1rem;
+	padding-block: 1rem;
+}
+
+.trending_destination__wrapper___content____card .destination {
+	width: 100px;
+	border-radius: 1rem;
+	object-fit: cover;
+}
+
+.trending_destination__wrapper___content____card .destination img {
+	height: 100%;
+	width: 100%;
+}
+
+.trending_destination__wrapper___content____card_____detail {
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+	padding-inline: 1.5rem;
+	text-align: left;
+}
+
+.trending_destination__wrapper___content____card_____detail .description {
+	overflow: hidden;
+	height: fit-content;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	line-height: 1.05rem;
+	font-size: .85rem;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	text-align: left;
+	font-weight: lighter;
+	margin-block: .3rem 0;
+}
+
+.trending_destination__wrapper___content____card_____detail .amount {
+	font-weight: bold;
+	font-size: 1rem;
+}
+
+.trending_destination__wrapper___content____card_____detail .name_rating {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-inline-end: 2rem;
+}
+
+.trending_destination__wrapper___content____card_____detail .name_rating .rating {
+	display: flex;
+	align-items: center;
+	gap: .5rem;
+}
+
+.trending_destination__wrapper___content____card_____detail .name_rating .star {
+	transform: scale(.75);
+	color: #e5a50a;
+	margin: 0;
+}
+
+.trending_destination__wrapper___content____card_____detail .name_rating * {
+	margin: 0;
+}
+
+
+/* Best Offers */
+.best_offer__container {
+	max-width: 80vw;
+}
+
+.best_offer__header___actions a {
+	color: #000;
+}
+
+.best_offer__content {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-auto-rows: auto;
+	align-items: center;
+	gap: 2rem;
+}
+
+.best_offer__content___card {
+	width: 100%;
+	background-color: #fff;
+	border-radius: 1rem;
+	padding: .5rem;
+	text-align: left;
+}
+
+.best_offer__content___detail img {
+	transform: scale(.65);
+	margin: 0;
+	opacity: .5;
+}
+
+.best_offer__content___card .apartment {
+	width: 100%;
+	height: 50%;
+	object-fit: cover;
+	border-radius: 1rem;
+}
+
+.best_offer__content___card .apartment_name {
+	font-weight: bold;
+	font-size: .75rem;
+	text-transform: capitalize;
+}
+
+.best_offer__content___card .apartment_location {
+	display: flex;
+	align-items: center;
+	font-size: .7rem;
+	font-weight: lighter;
+}
+
+.best_offer__content___card .apartment_amount__favorite {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.best_offer__content___card .apartment_amount__favorite .amount {
+	font-weight: bold;
+	font-size: .8rem;
+}
+
+.best_offer__content___card .apartment_amount__favorite .amount span {
+	font-weight: lighter;
+	font-size: .65rem;
+}
+
+.best_offer__content___card .apartment_amount__favorite .favorite_icon {
+	border-radius: .5rem;
+	border: 2px solid dimgrey;
+	padding: .3rem;
+	cursor: pointer;
+}
